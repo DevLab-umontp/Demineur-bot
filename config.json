@@ -1,0 +1,5 @@
+{
+	"clientId": " // L'identifiant de votre bot \\ ",
+	"guildId": " // L'identifiant de votre serveur \\ ",
+	"token": " // Le token de votre bot \\ "
+}
