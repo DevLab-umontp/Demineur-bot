@@ -23,11 +23,6 @@ module.exports = {
 				if(Math.random() <= 0.2) {
 					m[i][j] = 'x';
 					cpt++;
-					if(m[i][j-1] == ' ') {
-						m[i][j-1] = 1;
-					} else if (m[i][j-1] !== 'x') {
-						m[i][j-1]++;
-					}
 					if(m[i][j-1] == ' ') {m[i][j-1] = 1;} else if (m[i][j-1] !== 'x') {m[i][j-1]++;}
 					if(m[i][j+1] == ' ') {m[i][j+1] = 1;} else if (m[i][j+1] !== 'x') {m[i][j+1]++;}
 					if(m[i-1][j-1] == ' ') {m[i-1][j-1] = 1;} else if (m[i-1][j-1] !== 'x') {m[i-1][j-1]++;}
