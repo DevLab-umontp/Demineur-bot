@@ -28,6 +28,7 @@ module.exports = {
 					} else if (m[i][j-1] !== 'x') {
 						m[i][j-1]++;
 					}
+					if(m[i][j-1] == ' ') {m[i][j-1] = 1;} else if (m[i][j-1] !== 'x') {m[i][j-1]++;}
 					if(m[i][j+1] == ' ') {m[i][j+1] = 1;} else if (m[i][j+1] !== 'x') {m[i][j+1]++;}
 					if(m[i-1][j-1] == ' ') {m[i-1][j-1] = 1;} else if (m[i-1][j-1] !== 'x') {m[i-1][j-1]++;}
 					if(m[i-1][j] == ' ') {m[i-1][j] = 1;} else if (m[i-1][j] !== 'x') {m[i-1][j]++;}
