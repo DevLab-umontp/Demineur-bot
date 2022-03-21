@@ -46,7 +46,7 @@ module.exports = {
 			}
 			mes+="\n";
 		}
-		mes+="Total :" + cpt + " mines";
+		mes+="Total : " + cpt + " mine"+((cpt>0)?"s":"");
  		return interaction.reply(mes);
 	},
 };
