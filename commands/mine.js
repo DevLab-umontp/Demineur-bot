@@ -7,7 +7,6 @@ module.exports = {
 		.addIntegerOption(option => option.setName('niveau').setDescription('Le niveau du jeu')),
 	async execute(interaction) {
 		const amount = interaction.options.getInteger('niveau');
-		let cpt=0;
 		if (amount < 5 || amount > 9) {
 			return interaction.reply({ content: 'Vous devez entrer un nombre entre 5 et 9.', ephemeral: true });
 		}
@@ -18,6 +17,7 @@ module.exports = {
 				m[i][j] = ' ';
 			}
 		}
+		let cpt=0;
 		for(let i = 0; i<amount;i++) {
 			for(let j = 0; j<amount;j++) {
 				if(Math.random() <= 0.2) {
@@ -37,7 +37,7 @@ module.exports = {
 		let mes = "";
 		for(let i = 0; i<amount;i++) {
 			for(let j = 0; j<amount;j++) {
-				mes+= "||`" +  m[i][j] + "`||";
+				mes+= "|| `" +  m[i][j] + "` ||";
 			}
 			mes+="\n";
 		}
