@@ -4,9 +4,9 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('mine')
 		.setDescription('Génère un plateau de démineur!')
-		.addIntegerOption(option => option.setName('niveau').setDescription('Le niveau du jeu (5-9)')),
+		.addIntegerOption(option => option.setName('taille').setDescription('Le taille du jeu (5-9)')),
 	async execute(interaction) {
-		const amount = interaction.options.getInteger('niveau');
+		const amount = interaction.options.getInteger('taille');
 		if (amount < 5 || amount > 9) {
 			return interaction.reply({ content: 'Vous devez entrer un nombre entre 5 et 9.', ephemeral: true });
 		}
